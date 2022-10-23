@@ -1,0 +1,1 @@
+{"py/object": "personnage.personnage", "inventory": {"py/object": "inventory.Inventory", "maxWeight": 40, "maxItems": 15, "helmet": null, "chestplate": null, "legging": null, "content": [], "perso": {"py/id": 0}}, "health": 40, "currentHealth": 40, "baseDamage": 3, "effects": {"py/object": "personnage.personnage.Effects", "Power": 0, "Shield": 0}}
