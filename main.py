@@ -35,4 +35,4 @@ if __name__ == "__main__":
     )
     Pru.Save("Pru")
 
-    chestplate.Show()
+    Pru.Show()

@@ -8,7 +8,7 @@ from typing import List
 import item
 
 
-@dataclass
+@dataclass(repr=False)
 class Inventory(PyBehaviour):
     maxWeight: float = 40
     maxItems: int = 15
@@ -44,3 +44,21 @@ class Inventory(PyBehaviour):
         self.content.remove(obj)
         obj.inv = None
         return
+
+    def __repr__(self) -> str:
+        result = f"Weight: {self.weight}/{self.maxWeight}"
+        result += f"\nItems size: {self.ItemsSizes}/{self.maxItems}"
+
+        result += f"\nArmor:"
+        result += f"\n      - Helmet: {self.helmet}"
+        result += f"\n      - Chestplate: {self.chestplate}"
+        result += f"\n      - Legging: {self.legging}"
+
+        result += f"\nContent:"
+        if len(self.content) <= 0:
+            result += f"\n      EMPTY"
+        else:
+            for item in self.content:
+                result += f"\n      - {item}"
+
+        return result
